@@ -1,0 +1,588 @@
+/* Variables de la Paleta de Colores Oficial */
+:root {
+    --morado-oscuro: #2F2C76;
+    --verde-bosque: #125116;
+    --verde-oliva: #5F9233;
+    --azul-profundo: #0B5696;
+    --blanco: #FFFFFF;
+    --fondo-claro: #F4F7F6;
+    --texto-gris: #4A5568;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto-gris);
+    background-color: var(--fondo-claro);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navegación */
+.site-header {
+    background-color: var(--blanco);
+    border-bottom: 2px solid #E2E8F0;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.80rem;
+    font-weight: bold;
+    color: var(--verde-bosque);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--morado-oscuro);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--verde-oliva);
+}
+
+/* Sección Hero con imagen de fondo */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.65)),url("../img/banner.jpg") center / cover no-repeat;
+    color: var(--blanco);
+    text-align: center;
+    padding: 5rem 1rem;
+    height: 420px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero-content h2 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #f0f3fa
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #a8d9b5;
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--verde-oliva);
+    color: var(--blanco);
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-bosque);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--blanco);
+    border: 2px solid var(--blanco);
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--blanco);
+    color: var(--morado-oscuro);
+}
+
+/* Sección de Escenarios Futuros */
+.scenarios-section {
+    padding: 4rem 0 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h3 {
+    font-size: 2rem;
+    color: var(--morado-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.scenario-card {
+    background: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    overflow: hidden; /* Mantiene la imagen contenida en los bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.scenario-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contenedor y tamaño uniforme de las imágenes de Guijarro */
+.card-img-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #e2e8f0;
+}
+
+.scenario-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    padding: 1.5rem 1.75rem 2rem 1.75rem;
+    flex-grow: 1;
+}
+
+.scenario-card.distopia { border-top: 4px solid #E53E3E; }
+.scenario-card.eutopia { border-top: 4px solid var(--verde-oliva); }
+.scenario-card.utopia { border-top: 4px solid var(--azul-profundo); }
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.distopia .badge { background-color: #FED7D7; color: #9B2C2C; }
+.eutopia .badge { background-color: #DEF7EC; color: #03543F; }
+.utopia .badge { background-color: #E1EFFE; color: #1E429F; }
+
+.scenario-card h4 {
+    color: var(--morado-oscuro);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+
+/* Sección Conoce a Guijarro y a sus amigos */
+.characters-section {
+    padding: 4rem 0;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.character-card {
+    background: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+}
+
+.character-card.don-pena { border-top: 4px solid var(--verde-oliva); }
+.character-card.guijarro { border-top: 4px solid var(--verde-bosque); }
+.character-card.calabro { border-top: 4px solid var(--morado-oscuro); }
+
+.character-img-container {
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    background-color: #E2E8F0;
+}
+
+.character-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.character-body {
+    padding: 1.5rem 1.75rem 2rem 1.75rem;
+    flex-grow: 1;
+}
+
+.character-body h4 {
+    color: var(--morado-oscuro);
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+}
+
+.character-body p {
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--morado-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--blanco);
+}
+
+
+
+/* --- Estilos para la Página del Asesor de Compras --- */
+
+.shop-container {
+    display: flex;
+    gap: 2.5rem;
+    padding: 3rem 0;
+    align-items: flex-start;
+}
+
+/* Columna Izquierda (Categorías + Calabro) */
+.shop-left-column {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* Sidebar de Categorías */
+.shop-sidebar {
+    width: 100%;
+    background: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    border-top: 4px solid var(--morado-oscuro);
+}
+
+.shop-sidebar h3 {
+    font-size: 1.1rem;
+    color: var(--morado-oscuro);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.category-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: var(--texto-gris);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.category-list a:hover, .category-list a.active-category {
+    background-color: #EDF2F7;
+    color: var(--verde-bosque);
+}
+
+/* Tarjeta de Calabro debajo de Categorías */
+.advisor-character-card {
+    background: var(--blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    border-top: 4px solid var(--verde-oliva);
+    text-align: center;
+}
+
+.advisor-img-box {
+    width: 100%;
+    height: 220px;
+    background-color: #E2E8F0;
+    overflow: hidden;
+}
+
+.advisor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.advisor-caption {
+    padding: 1rem 1.25rem;
+}
+
+.advisor-caption h4 {
+    color: var(--morado-oscuro);
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.advisor-caption p {
+    font-size: 0.85rem;
+    color: var(--texto-gris);
+}
+
+/* Contenido Principal de la Tienda */
+.shop-content {
+    flex-grow: 1;
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.shop-header h2 {
+    font-size: 2.25rem;
+    color: var(--morado-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.shop-header p {
+    color: var(--texto-gris);
+    margin-bottom: 1.5rem;
+}
+
+/* Barra de Búsqueda */
+.search-box input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid #CBD5E0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--azul-profundo);
+}
+
+/* Info de Resultados */
+.results-info {
+    margin-bottom: 1.5rem;
+}
+
+.results-info h3 {
+    font-size: 1.35rem;
+    color: var(--morado-oscuro);
+}
+
+.results-info p {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Cuadrícula de 3 Productos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: var(--blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    border: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--morado-oscuro);
+    color: var(--blanco);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* Contenedor de Foto Real del Producto */
+.product-img-container {
+    width: 100%;
+    height: 180px;
+    background-color: var(--blanco);
+    border-bottom: 1px solid #EDF2F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex-grow: 1;
+}
+
+.product-info h4 {
+    color: var(--morado-oscuro);
+    font-size: 1.15rem;
+}
+
+.product-reason {
+    font-size: 0.88rem;
+    color: var(--texto-gris);
+    line-height: 1.45;
+}
+
+.product-specs {
+    list-style: none;
+    background-color: var(--fondo-claro);
+    padding: 0.65rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.product-scores {
+    margin-top: auto;
+    padding-top: 0.4rem;
+    font-size: 0.88rem;
+}
+
+.btn-product {
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-align: center;
+    background-color: var(--verde-oliva);
+    color: var(--blanco);
+    padding: 0.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-product:hover {
+    background-color: var(--verde-bosque);
+}
+
+.footer-content-shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

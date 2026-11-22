@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoConciencia - Asesor de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cabecera y Navegación -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <img src="img/Logo-Tecno.png" alt="Logo TecnoConciencia" class="logo-img">
+                <span class="logo-text">Tecnoconciencia</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">HISTORIAS</a></li>
+                    <li><a href="asesor.html" class="active">ASESOR DE COMPRAS</a></li>
+                    <li><a href="#">REPARACIÓN</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal del Asesor -->
+    <main class="container shop-container">
+
+        <!-- Columna Izquierda: Categorías + Personaje Calabro -->
+        <aside class="shop-left-column">
+            <div class="shop-sidebar">
+                <h3>Categorías</h3>
+                <ul class="category-list">
+                    <li><a href="#" class="active-category">💻 Laptops</a></li>
+                    <li><a href="#">📱 Móviles</a></li>
+                    <li><a href="#">📺 Televisores</a></li>
+                    <li><a href="#">🔧 Repair Score</a></li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta del Asesor Calabro -->
+            <div class="advisor-character-card">
+                <div class="advisor-img-box">
+                    <img src="img/calabro.png" alt="Calabro - Asesor de Compras" class="advisor-img">
+                </div>
+                <div class="advisor-caption">
+                    <h4>Calabro</h4>
+                    <p>Tu asesor de compras (¡Ojo! Revisa bien su ficha antes de confiar en sus ofertas).</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Columna Derecha: Buscador y 3 Recomendaciones -->
+        <section class="shop-content">
+            <div class="shop-header">
+                <h2>Asesor de Compras</h2>
+                <p>Compara laptops, móviles y televisores con foco en durabilidad y reparabilidad.</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar productos...">
+                </div>
+            </div>
+
+            <div class="results-info">
+                <h3>Recomendaciones (3 productos)</h3>
+                <p>Resultados actualizados según criterios de reparabilidad y durabilidad.</p>
+            </div>
+
+            <!-- Cuadrícula de 3 Productos -->
+            <div class="products-grid">
+
+                <!-- Producto 1: Laptop -->
+                <article class="product-card">
+                    <span class="product-badge">LAPTOPS</span>
+                    <div class="product-img-container">
+                        <img src="img/Laptop.jpg" alt="Framework Laptop 12" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h4>Framework Laptop 12</h4>
+                        <p class="product-reason"><strong>Por qué destaca:</strong> 100% modular; permite cambiar puertos, batería, RAM y SSD con un solo destornillador.</p>
+                        <ul class="product-specs">
+                            <li><strong>Pantalla:</strong> 12.2" FHD+ Táctil</li>
+                            <li><strong>Hardware:</strong> Intel Core / DDR5 ampliable</li>
+                            <li><strong>Puertos:</strong> 4 módulos intercambiables</li>
+                        </ul>
+                        <div class="product-scores">
+                            <p><strong>Durabilidad:</strong> 9/10</p>
+                            <p><strong>Reparabilidad:</strong> 10/10</p>
+                        </div>
+                        <a href="#" class="btn-product">Ver detalles</a>
+                    </div>
+                </article>
+
+                <!-- Producto 2: Celular -->
+                <article class="product-card">
+                    <span class="product-badge">MÓVILES</span>
+                    <div class="product-img-container">
+                        <img src="img/movil.jpeg" alt="Fairphone Gen 6+" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h4>Fairphone (Gen. 6+)</h4>
+                        <p class="product-reason"><strong>Por qué destaca:</strong> Sin pegamentos; 12 piezas reemplazables en casa y 7 años de soporte y repuestos.</p>
+                        <ul class="product-specs">
+                            <li><strong>Pantalla:</strong> 6.31" OLED</li>
+                            <li><strong>Memoria:</strong> 256 GB + microSD hasta 2 TB</li>
+                            <li><strong>Batería:</strong> 4,415 mAh extraíble</li>
+                        </ul>
+                        <div class="product-scores">
+                            <p><strong>Durabilidad:</strong> 9/10</p>
+                            <p><strong>Reparabilidad:</strong> 10/10</p>
+                        </div>
+                        <a href="#" class="btn-product">Ver detalles</a>
+                    </div>
+                </article>
+
+                <!-- Producto 3: Televisor -->
+                <article class="product-card">
+                    <span class="product-badge">TELEVISORES</span>
+                    <div class="product-img-container">
+                        <img src="img/tv.png" alt="Televisor TCL QM7 Mini-LED" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h4>TCL Serie QM7 (55" / 65")</h4>
+                        <p class="product-reason"><strong>Por qué destaca:</strong> Mejor calidad-precio Mini-LED sin riesgo de quemado de pantalla y con repuestos accesibles.</p>
+                        <ul class="product-specs">
+                            <li><strong>Panel:</strong> 4K UHD QD-Mini LED</li>
+                            <li><strong>Fluidez:</strong> 120Hz nativos (VRR 144Hz)</li>
+                            <li><strong>Sistema:</strong> Google TV + AIPQ Pro</li>
+                        </ul>
+                        <div class="product-scores">
+                            <p><strong>Durabilidad:</strong> 8.5/10</p>
+                            <p><strong>Reparabilidad:</strong> 8/10</p>
+                        </div>
+                        <a href="#" class="btn-product">Ver detalles</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="footer-content-shop">
+            <p>Tecnoconciencia © 2026</p>
+            <p>Diseñado para compras informadas: durabilidad, reparabilidad y reparación.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
