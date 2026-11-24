@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoConciencia - Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cabecera y Navegación -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <img src="img/Logo-Tecno.png" alt="Logo TecnoConciencia" class="logo-img">
+                <span class="logo-text">Tecnoconciencia</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="historias.html">HISTORIAS</a></li>
+                    <li><a href="asesor.html">ASESOR DE COMPRAS</a></li>
+                    <li><a href="reparacion.html">REPARACIÓN</a></li>
+                    <li><a href="contacto.html" class="active">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner de Paisaje debajo del Header -->
+    <section class="contact-banner">
+        <div class="container contact-banner-content">
+            <span class="badge contact-badge">Hablemos</span>
+            <h2>Contacto TecnoConciencia</h2>
+            <p>¿Tienes dudas sobre durabilidad, reparabilidad, repuestos o quieres sumarte a la conversación? Escríbenos.</p>
+        </div>
+    </section>
+
+    <!-- Sección Principal: Formulario + Guijarro Señalando + Instagram -->
+    <main class="container contact-main">
+        <div class="contact-grid">
+
+            <!-- Columna Izquierda: Formulario -->
+            <div class="contact-form-card">
+                <h3>Envíanos un mensaje</h3>
+                <p class="contact-form-subtitle">Completa los datos y cuéntanos en qué te podemos orientar.</p>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" placeholder="Ej. 300 123 4567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu consulta, sugerencia o idea..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary contact-submit-btn">Enviar mensaje</button>
+                    <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <!-- Columna Derecha: Guijarro Señalando + Tarjeta de Instagram -->
+            <aside class="contact-side-column">
+                <div class="guijarro-pointer-card">
+                    <div class="guijarro-pointer-img-box">
+                        <img src="img/Guijarro Señalando.png" alt="Guijarro la nutria señalando nuestro Instagram" class="guijarro-pointer-img">
+                    </div>
+                    <p class="guijarro-speech">"¡Por acá también compartimos historias, tips y novedades en comunidad!"</p>
+                </div>
+
+                <a href="https://www.instagram.com/tecnoconciencia.co/" target="_blank" rel="noopener noreferrer" class="instagram-card">
+                    <div class="ig-icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    <div class="ig-details">
+                        <span class="ig-label">Síguenos en Instagram</span>
+                        <strong class="ig-handle">@tecnoconciencia.co</strong>
+                        <small class="ig-cta">Ver perfil y publicaciones →</small>
+                    </div>
+                </a>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Tecnoconciencia — Acceso a información para decisiones más responsables.</p>
+            <div class="footer-links">
+                <a href="#">Política de privacidad</a> | <a href="#">Términos de uso</a> | <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formFeedback = document.getElementById("formFeedback");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const nombre = document.getElementById("nombre").value.trim();
+            formFeedback.textContent = `¡Gracias, ${nombre}! Tu mensaje quedó registrado en este borrador de la web.`;
+            formFeedback.classList.add("is-visible");
+            contactForm.reset();
+        });
+    </script>
+
+</body>
+</html>
